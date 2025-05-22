@@ -38,5 +38,9 @@
     <color name="DarkPinkWaves">#D27372</color>
     <color name="DarkestPinkAccents">#9F4E4E</color>
     <color name="WhiteLines">#FFFFFF</color>
+    <color name="rose">#F06292</color> <!-- For title background -->
+    <color name="teal_700">#018786</color> <!-- For Update button -->
+    <color name="gray">#777777</color> <!-- For Cancel button -->
+
 
 </resources>

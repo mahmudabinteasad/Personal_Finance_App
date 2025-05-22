@@ -1,33 +1,64 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activityTransactionList"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pic"
+    android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Header -->
+    <TextView
+        android:id="@+id/transactionHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transaction History"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="12dp" />
+
+    <!-- Total Amount -->
+    <TextView
+        android:id="@+id/totalAmountTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: ৳"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:gravity="end"
+        android:paddingBottom="12dp" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transactionRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp" />
+
+    <!-- Empty View -->
     <TextView
         android:id="@+id/emptyTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="No transactions found."
+        android:textSize="16sp"
+        android:textColor="@color/DarkSlate"
         android:gravity="center"
         android:visibility="gone"
-        android:textSize="18sp"
-        android:textColor="@android:color/darker_gray"
-        android:layout_marginTop="20dp" />
+        android:paddingTop="16dp" />
 
+    <!-- Progress Bar -->
     <ProgressBar
         android:id="@+id/transactionProgressBar"
+        style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        android:layout_marginBottom="16dp"/>
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/transactionRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 </LinearLayout>
